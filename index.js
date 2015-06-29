@@ -134,6 +134,14 @@ Emitter.prototype.of = function(nsp) {
 Emitter.prototype.emit = function(){
   // packet
   var args = Array.prototype.slice.call(arguments);
+
+  // isolate callback and remove it from the rest of the data
+  var cb = null;
+  if(args.length === 3){
+    cb = args[2];
+    delete args[2]
+  }
+
   var packet = {};
   packet.type = hasBin(args) ? parser.BINARY_EVENT : parser.EVENT;
   packet.data = args;
@@ -149,7 +157,13 @@ Emitter.prototype.emit = function(){
   this.channel.publish(this.key, { uid: uid, data: msgpack([packet, {
     rooms: this._rooms,
     flags: this._flags
-  }])});
+  }])}, onPublishComplete);
+
+  function onPublishComplete(){
+    if (typeof(cb) === "function") {
+      cb();
+    };
+  };
 
   // reset state
   this._rooms = [];
