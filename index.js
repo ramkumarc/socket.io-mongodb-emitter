@@ -9,7 +9,6 @@ var hasBin = require('has-binary-data');
 var msgpack = require('msgpack-js').encode;
 var debug = require('debug')('socket.io-mongodb-emitter');
 var mongodbUri = require('mongodb-uri');
-var util = require('util');
 
 
 /**
