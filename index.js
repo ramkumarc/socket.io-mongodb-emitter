@@ -9,6 +9,7 @@ var hasBin = require('has-binary-data');
 var msgpack = require('msgpack-js').encode;
 var debug = require('debug')('socket.io-mongodb-emitter');
 var mongodbUri = require('mongodb-uri');
+var util = require('util');
 
 
 /**
@@ -156,4 +157,14 @@ Emitter.prototype.emit = function(){
   this._flags = {};
 
   return this;
+};
+
+/**
+ * Close the client connection
+ *
+ * @api private
+ */
+
+Emitter.prototype.close = function(){
+  this.client.close();
 };
