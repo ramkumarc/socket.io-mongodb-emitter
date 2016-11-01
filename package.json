@@ -10,7 +10,7 @@
     "has-binary-data": "^0.1.1",
     "uid2": "^0.0.3",
     "socket.io-parser": "^2.2.0",
-    "mubsub": "^1.0.4"
+    "mubsub": "^1.2.0"
   },
   "devDependencies": {},
   "keywords": [
