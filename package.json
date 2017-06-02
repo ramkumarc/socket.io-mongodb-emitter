@@ -1,6 +1,6 @@
 {
   "name": "socket.io-mongodb-emitter",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "`socket.io-mongodb-emitter` is an mongodb implementation of `socket-io-emitter`",
   "main": "index.js",
   "dependencies": {
@@ -10,7 +10,7 @@
     "has-binary-data": "^0.1.1",
     "uid2": "^0.0.3",
     "socket.io-parser": "^2.2.0",
-    "mubsub": "^1.2.0"
+    "mubsub": "^1.4.0"
   },
   "devDependencies": {},
   "keywords": [
@@ -19,12 +19,13 @@
   ],
   "maintainers": [
     {
-      "name": "Ram"
+      "name": "Lou Klepner",
+      "email": "lklepner@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ramkumarc/socket.io-mongodb-emitter.git"
+    "url": "https://github.com/lklepner/socket.io-mongodb-emitter.git"
   },
   "license": "MIT"
 }
