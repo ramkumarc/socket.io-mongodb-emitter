@@ -41,6 +41,7 @@ function Emitter(uri, opts){
   if (!(this instanceof Emitter)) return new Emitter(uri, opts);
   opts = opts || {};
 
+  var socket = opts.socket;
   var client = opts.client;
 
   // init clients if needed
