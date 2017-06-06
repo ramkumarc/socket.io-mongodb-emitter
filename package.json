@@ -1,6 +1,6 @@
 {
   "name": "socket.io-mongodb-emitter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "`socket.io-mongodb-emitter` is an mongodb implementation of `socket-io-emitter`",
   "main": "index.js",
   "dependencies": {

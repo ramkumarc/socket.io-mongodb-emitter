@@ -41,10 +41,15 @@ function Emitter(uri, opts){
   if (!(this instanceof Emitter)) return new Emitter(uri, opts);
   opts = opts || {};
 
-  var client = opts.client;
+  // if passed object
+  if (typeof uri == 'object') {
+    opts = uri;
+  }
 
+  var socket = opts.socket;
+  var client = opts.client;
   // init clients if needed
-  if (!client) client = socket ? mubsub(socket) : mubsub(uri);
+  if (!client) client = socket ? mubsub(socket) : mubsub(uri, opts.mongoOpts);
 
   this.client = client;
   this.key = (opts.key || 'socket.io');
