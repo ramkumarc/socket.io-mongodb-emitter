@@ -35,6 +35,7 @@ The following options are allowed:
 - `socket`: unix domain socket to connect to mongo (`"/tmp/mongo.sock"`). Will
   be used instead of the host and port options if specified.
 - `client`: optional, the mubsub client to publish events on
+- `mongoOpts`: optional, mongodb connection options. only applicable if URI is used
 
 ### Emitter#to(room:String):Emitter
 ### Emitter#in(room:String):Emitter
