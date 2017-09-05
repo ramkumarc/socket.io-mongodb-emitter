@@ -9,8 +9,8 @@
     "debug": "^0.7.4",
     "has-binary-data": "^0.1.1",
     "uid2": "^0.0.3",
-    "socket.io-parser": "^2.2.0",
-    "mubsub": "^1.2.0"
+    "socket.io-parser": "^3.1.0",
+    "mubsub": "^1.4.0"
   },
   "devDependencies": {},
   "keywords": [
